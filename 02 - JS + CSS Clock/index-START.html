@@ -78,11 +78,11 @@
   function setDate() {
     const now = new Date();
     const seconds = now.getSeconds();
-    // if (seconds === "59"){
-    //   hand.style.transition = `none`;
-    // }
+    if (seconds === 59){
+      hand.style.transition = `none`;
+    }
     if (seconds === 0){
-      seconds = seconds + 60;
+      hand.style.transition = `all 0.05s`;
     }
     const secondsDegrees = ((seconds / 60) * 360) + 90;
     secondHand.style.transform = `rotate(${secondsDegrees}deg)`;
